@@ -1,0 +1,19 @@
+RADAR VIRAL V8 — VISUAL PROFISSIONAL DAS NOTÍCIAS
+
+O que mudou:
+- noticia.html: matéria sem caixa, com título, capa, texto e rodapé.
+- materia.css: estilos exclusivos da página de notícias, responsivos.
+- noticia.js: mantém leitura do Supabase e contador de visualizações; inclui matérias relacionadas quando existirem.
+
+O que NÃO mudou:
+- painel administrativo, login, permissões e publicação.
+- index.html e ranking Em alta.
+- estrutura de tabelas e notícias existentes no Supabase.
+
+COMO TESTAR
+1. Extraia este ZIP em uma nova pasta.
+2. Copie o seu supabase-config.js FUNCIONANDO da pasta V7 para a pasta radar-viral desta V8, substituindo o arquivo vazio.
+3. Abra index.html e clique em Ler matéria.
+4. Confira o novo visual. Não precisa executar SQL novamente.
+
+IMPORTANTE: use apenas a URL e a chave publishable/anon pública no supabase-config.js. Nunca coloque a secret key.

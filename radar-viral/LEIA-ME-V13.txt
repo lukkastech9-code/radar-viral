@@ -1,0 +1,21 @@
+RADAR VIRAL V13
+
+Esta versão parte da V12.2 e adiciona melhorias de uso ao painel editorial.
+
+NOVIDADES
+- Busca de matérias por título ou identificador (slug).
+- Filtro por rascunhos, matérias em revisão e publicadas.
+- Contagem dos resultados filtrados.
+- Validação antecipada de imagens JPG, PNG e WebP de até 5 MB.
+- Melhorias de foco por teclado e adaptação do painel a telas menores.
+
+ATUALIZAÇÃO
+1. Extraia este ZIP em uma pasta nova; não apague a V12.2.
+2. Copie o arquivo supabase-config.js da instalação que já funciona para esta pasta.
+3. Abra index.html para o site e painel.html para o painel.
+4. Não é necessário executar SQL para estas melhorias.
+
+IMPORTANTE
+- O arquivo supabase-config.js deve conter somente a URL do projeto e a chave publicável/anon do Supabase. Nunca coloque service_role ou chave secreta no navegador.
+- A segurança real dos dados depende das políticas RLS e permissões configuradas no Supabase; estas melhorias de interface não substituem uma auditoria dessas políticas.
+- O painel online deve ser servido por HTTPS e precisa de internet para carregar o Supabase.

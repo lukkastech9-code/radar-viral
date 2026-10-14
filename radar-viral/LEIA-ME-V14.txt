@@ -1,0 +1,32 @@
+RADAR VIRAL — VERSÃO 14
+
+Esta versão parte dos arquivos V13 fornecidos e mantém os arquivos e recursos existentes.
+
+NOVIDADES V14
+- Página Termos de Uso (termos.html).
+- Rodapé atualizado com links para Sobre, Contato, Privacidade e Termos de Uso no portal, categorias e matéria.
+- Política de Privacidade ampliada para refletir os recursos atuais e informar que o AdSense ainda não está ativo.
+- Estrutura inicial para Google AdSense, com espaços de anúncio e configuração separada.
+- Sem alterações no esquema do Supabase e sem SQL novo.
+
+IMPORTANTE SOBRE O ADSENSE
+A integração ainda NÃO veicula anúncios por padrão. Para ativá-la:
+1. Publique o site em um domínio acessível pela internet e conclua o processo da conta Google AdSense.
+2. No arquivo adsense-config.js, preencha publisherId com o ID fornecido pelo Google (formato ca-pub-...).
+3. Preencha os IDs de unidades de anúncio em slots.home, slots.article e slots.category.
+4. Faça testes no site publicado e aguarde a aprovação/ativação do Google. Não invente IDs e não use os espaços de teste como se fossem anúncios reais.
+5. Atualize a Política de Privacidade para refletir exatamente os recursos e consentimentos usados antes de habilitar publicidade.
+
+Os espaços tracejados vistos localmente são apenas marcadores visuais. A integração depende de IDs válidos, configuração da conta e das políticas do Google. Não há garantia de aprovação.
+
+ATUALIZAÇÃO
+1. Extraia o ZIP V14 em uma pasta nova. Não apague a V13.
+2. Confira se supabase-config.js continua com a URL do projeto e a chave publicável/anon corretas.
+3. Abra index.html para testar o portal e painel.html para testar a redação.
+4. Não execute SQL para as mudanças V14.
+5. Teste publicação, categorias, página de matéria, login e rodapé antes de substituir a versão online.
+
+SEGURANÇA
+- Use somente a chave publicável/anon no navegador. Nunca coloque service_role ou chave secreta em arquivos públicos.
+- O painel online deve ser servido por HTTPS e depende de internet.
+- Termos e Política de Privacidade são modelos iniciais; revise-os para refletir a operação real e a legislação aplicável.

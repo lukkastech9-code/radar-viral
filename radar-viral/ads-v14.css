@@ -1,0 +1,8 @@
+/* Radar Viral V14 — espaços de publicidade */
+.rv-ad-slot{display:none;max-width:100%;min-height:90px;margin:26px auto;padding:10px;box-sizing:border-box;text-align:center;overflow:hidden}
+.rv-ad-slot.is-preview{display:block;border:1px dashed #383842;border-radius:10px;color:#85858f;font-size:12px;min-height:64px;padding:20px}
+.rv-ad-slot .rv-ad-label{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;color:#777782}
+.article-legal-links{display:flex;flex-wrap:wrap;gap:16px;margin-right:auto}
+.article-legal-links a{color:#aaaab5;text-decoration:none;font-size:13px}
+.article-legal-links a:hover{color:#ff304f}
+@media(max-width:700px){.rv-ad-slot{margin:18px auto}.article-legal-links{gap:10px}}

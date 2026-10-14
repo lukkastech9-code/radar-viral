@@ -1,0 +1,5 @@
+RADAR VIRAL V12.2 — Correção do bloco institucional da página inicial.
+
+O bloco “Curiosidade é o que nos move” usa agora uma classe CSS isolada (rv-project-box), evitando conflitos com estilos anteriores. Somente o botão “Fale com a redação” é um link; ele abre o aplicativo de e-mail.
+
+IMPORTANTE: O arquivo supabase-config.js do pacote está vazio por segurança. Copie o supabase-config.js configurado da versão que estava funcionando para esta pasta, substituindo o arquivo existente. Não precisa executar SQL.

@@ -1,0 +1,25 @@
+RADAR VIRAL V12 — ATUALIZAÇÃO DA V11
+
+1. Extraia este ZIP em uma NOVA pasta (não apague a V11 ainda).
+2. Copie seu supabase-config.js FUNCIONAL da V11 para a pasta radar-viral da V12.
+3. No Supabase > SQL Editor, execute ATUALIZAR-SUPABASE-V12.sql UMA VEZ.
+   Este SQL mantém a contagem diária V10 e acrescenta contagem horária.
+4. Abra index.html, noticia.html?id=SEU-SLUG e painel.html para testar.
+
+NOVIDADES
+- Em Alta no Radar: três matérias com mais acessos dos últimos 7 dias.
+- TOP 5 das últimas 24 horas: dados novos por hora após rodar SQL V12.
+- Pesquisa da home por texto, categoria, intervalo de datas e ordenação.
+- Modo leitura: fonte ajustável e leitura focada nas matérias.
+- Estatísticas do painel: publicadas, rascunhos, em revisão, total de visualizações e categorias.
+- Ajustes de carregamento: imagens de listas com lazy loading; destaque principal eager.
+
+OBSERVAÇÕES IMPORTANTES
+- A V12 não pede nova chave nem modifica usuários, artigos ou imagens existentes.
+- As estatísticas são contagens de aberturas, não usuários únicos.
+- O ranking 24h usa blocos de uma hora e só terá dados após a migração.
+- SEO: títulos, descrições, Open Graph e dados estruturados das matérias já existem; para indexação confiável e prévias em redes sociais, o ideal é futuramente gerar HTML estático por artigo, pois hoje o conteúdo vem por JavaScript.
+- Não coloque service_role nem chave secreta do Supabase no navegador.
+- Em caso de problema, guarde sua pasta V11 como backup.
+
+V12.1: ajuste visual isolado do bloco inferior (Curiosidade e o que nos move). Sem novo SQL.
