@@ -1,0 +1,9 @@
+RADAR VIRAL V16
+
+- Pesquisa e filtros reunidos em pesquisa.html, acessível pela lupa do cabeçalho.
+- Lupa ao lado do menu em telas pequenas; disponível também no desktop.
+- Página inicial com carrossel automático de até cinco matérias publicadas, priorizando uma de cada editoria.
+- O carrossel troca a cada 6,5 segundos e oferece navegação manual.
+- Nenhuma matéria nova foi inventada. O carrossel usa o conjunto de matérias que o site carrega do Supabase.
+
+Publicação: envie o conteúdo da pasta radar-viral para o repositório e mantenha o diretório raiz da Vercel configurado como radar-viral.
