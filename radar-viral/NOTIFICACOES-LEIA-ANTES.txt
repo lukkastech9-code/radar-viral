@@ -1,0 +1,13 @@
+RADAR VIRAL — NOTIFICAÇÕES (V16)
+
+O projeto possui o botão de notificações push e o Service Worker, mas o envio push NÃO fica funcional só com o Supabase configurado.
+
+Para ativar push real, é necessário configurar em push-config.js:
+- vapidPublicKey: chave PÚBLICA VAPID
+- subscribeEndpoint: URL HTTPS de uma função/servidor que recebe e armazena a inscrição push
+
+A chave PRIVADA VAPID nunca deve ir para o navegador. O envio das notificações deve acontecer no servidor/Edge Function. O SQL ATUALIZAR-SUPABASE-V15-PUSH.sql cria a tabela de inscrições, mas sozinho não envia push.
+
+O arquivo supabase-config.js deste ZIP está vazio por segurança, conforme a nota original do pacote. Preserve/copiei nele as configurações públicas do Supabase já existentes no projeto antes de publicar, se necessário.
+
+Não é preciso executar novamente o SQL do Supabase apenas para substituir os arquivos estáticos deste pacote. Não publique chaves privadas.
