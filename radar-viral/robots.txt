@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /painel.html
 Disallow: /editor-local.html
+
+Sitemap: https://radar-viral-radar-viral-livid.vercel.app/sitemap.xml
