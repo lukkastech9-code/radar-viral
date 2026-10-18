@@ -1,0 +1,21 @@
+/* Radar Viral V12 */.v12-hot{margin:42px 0}.v12-hot-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.v12-hot-card{background:#1a1a21;border:1px solid #303038;border-radius:13px;overflow:hidden;display:block}.v12-hot-card>img{width:100%;aspect-ratio:16/9;object-fit:cover}.v12-hot-card>div{padding:16px}.v12-hot-card span{color:#ff5264;font-size:11px;text-transform:uppercase;font-weight:800}.v12-hot-card h3{font-size:17px;line-height:1.35;margin:8px 0}.v12-hot-card small{color:#aaa}.v12-search-filters{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;align-items:end}.v12-search-filters label{font-size:12px;color:#aaa;display:grid;gap:5px;flex:1;min-width:125px}.v12-search-filters input,.v12-search-filters select{background:#202027;border:1px solid #454550;color:white;border-radius:7px;padding:10px;width:100%;min-height:40px}.v12-search-filters button{padding:10px 15px;border-radius:7px;background:#32323b;color:#fff;border:1px solid #555;min-height:40px}@media(max-width:750px){.v12-hot-grid{grid-template-columns:1fr}.v12-hot-card{display:grid;grid-template-columns:38% 1fr}.v12-hot-card>img{height:100%;aspect-ratio:auto}}
+/* V12.1 — correção isolada do bloco inferior da página inicial. */
+.newsletter{display:flex;align-items:center;justify-content:space-between;gap:32px;min-height:185px;padding:32px 40px;overflow:hidden}
+.newsletter>div{min-width:0;flex:1 1 auto}
+.newsletter .eyebrow{display:block;background:none;border:0;padding:0;margin:0 0 12px;color:var(--red);font-size:11px;font-weight:900;letter-spacing:2px;line-height:1.4}
+.newsletter .eyebrow::before,.newsletter .eyebrow::after,.newsletter::before,.newsletter::after{content:none!important;display:none!important}
+.newsletter h2{display:block;margin:0 0 12px;padding:0;background:none;font-size:clamp(23px,2.5vw,30px);line-height:1.25;overflow-wrap:break-word}
+.newsletter p{display:block;margin:0;color:#b9b9c4;font-size:14px;line-height:1.65;overflow-wrap:break-word}
+.newsletter>a{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;min-height:44px;text-align:center;white-space:normal}
+@media(max-width:680px){.newsletter{flex-direction:column;align-items:stretch;gap:22px;padding:25px 22px}.newsletter>a{align-self:flex-start}}
+
+/* V12.2: bloco institucional isolado dos estilos antigos de newsletter */
+.rv-project-box{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:space-between;gap:28px;margin:0 0 70px;padding:34px 40px;border:1px solid #41313b;border-radius:14px;background:linear-gradient(115deg,#27202a,#16161d);overflow:visible}
+.rv-project-box::before,.rv-project-box::after,.rv-project-box *::before,.rv-project-box *::after{content:none!important;display:none!important}
+.rv-project-box>div{flex:1 1 auto;min-width:0}
+.rv-project-box .eyebrow{display:block;margin:0 0 13px;padding:0;border:0;background:transparent;color:#f02e42;font-size:11px;font-weight:900;letter-spacing:2.3px;line-height:1.5}
+.rv-project-box h2{margin:0 0 12px;padding:0;font-size:clamp(23px,2.5vw,30px);line-height:1.25;letter-spacing:normal;color:#f7f7f8}
+.rv-project-box p{margin:0;padding:0;color:#b9b9c4;font-size:14px;font-weight:400;line-height:1.65}
+.rv-project-box>a{display:inline-flex;flex:0 0 auto;align-items:center;justify-content:center;padding:14px 16px;min-height:44px;border-radius:6px;background:#f02e42;color:white;font-size:12px;font-weight:800;text-decoration:none;text-align:center}
+.rv-project-box>a:hover{background:#d92539}
+@media(max-width:680px){.rv-project-box{flex-direction:column;align-items:stretch;gap:20px;padding:25px 22px}.rv-project-box>a{align-self:flex-start}}

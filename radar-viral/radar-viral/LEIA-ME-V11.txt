@@ -1,0 +1,12 @@
+RADAR VIRAL V11 — PÁGINAS DE CATEGORIAS E COMPARTILHAMENTO
+
+1. Extraia este ZIP e mantenha a V10 guardada.
+2. Copie o arquivo supabase-config.js da V10 que está funcionando e substitua o arquivo com o mesmo nome na V11.
+3. Abra index.html. Clique em Games, Tecnologia, Entretenimento, Tendências ou Curiosidades: cada uma abre sua página própria.
+4. Em cada página, use a pesquisa específica e Carregar mais.
+5. Abra uma notícia e veja os ícones de WhatsApp, Facebook, Instagram, X, Telegram, LinkedIn e copiar link.
+6. Instagram: usa o compartilhamento nativo se disponível; caso contrário, copia o link.
+
+Não é necessário executar SQL adicional para a V11.
+As notícias continuam sendo lidas do Supabase; o painel e as configurações anteriores permanecem.
+IMPORTANTE: links compartilhados só serão acessíveis a outras pessoas após publicar o site em um endereço público HTTPS.

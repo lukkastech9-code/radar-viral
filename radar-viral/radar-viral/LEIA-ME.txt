@@ -1,0 +1,12 @@
+RADAR VIRAL V5 — SEM PYTHON
+
+1. Extraia o ZIP.
+2. Abra radar-viral/editor-local.html no Chrome.
+3. Clique em Importar artigos.json e escolha o arquivo da mesma pasta.
+4. Edite ou crie artigos e clique em Salvar no editor.
+5. Clique em Gerar site ZIP (sem Python).
+6. Extraia o ZIP gerado em outra pasta e abra radar-viral/index.html para testar.
+7. Para publicar online, envie apenas os arquivos públicos (index.html, paginas institucionais, style.css, paginas.css, script.js, content.js, artigos/). NÃO envie editor-local.html, arquivos-base.js, gerador-v5.js ou jszip.min.js.
+
+A geração não publica automaticamente. Guarde backup de artigos.json.
+Não existe login nesta versão; painel seguro será desenvolvido futuramente.

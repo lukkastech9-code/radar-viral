@@ -1,0 +1,17 @@
+RADAR VIRAL V6 — PAINEL ONLINE COM SEGURANÇA REAL — SEM PYTHON
+
+1) O SITE V5 E O EDITOR LOCAL CONTINUAM FUNCIONANDO SEM INSTALAR NADA.
+2) Para ativar V6 online, crie um projeto gratuito em https://supabase.com.
+3) No Supabase > SQL Editor, cole e execute TODO o arquivo supabase-setup.sql.
+4) Authentication > Users > Add user: crie sua conta com e-mail e senha fortes.
+5) No SQL Editor, execute a linha de promoção ao fim do SQL, substituindo SEU_EMAIL_AQUI pelo seu e-mail real. Só sua conta deve ser admin.
+6) Supabase > Project Settings > API Keys: copie Project URL e a chave publishable/anon. Preencha supabase-config.js. NUNCA use service_role ou secret key.
+7) Hospede os arquivos da pasta radar-viral em HTTPS (por exemplo Cloudflare Pages). Acesse /painel.html e entre.
+8) Crie notícias e publique. No index.html, notícias publicadas são carregadas do Supabase e abrem em noticia.html.
+9) Para adicionar redatores, crie contas em Authentication > Users; por padrão, o perfil é writer. Não compartilhe sua conta admin.
+
+IMPORTANTE: sem configurar o Supabase, o painel mostra instruções, não um login falso. O portal mantém a demonstração V5. A internet é necessária para o painel online.
+
+SEGURANÇA: políticas RLS no banco restringem publicação a admins. Não há cadastro público no painel. Use senha forte, ative MFA quando disponível e faça backup. Para produção, revise políticas, configure domínio/CORS e proteção contra abuso.
+
+NOTA: o gerador ZIP local V5 continua separado do painel online. Se configurar o Supabase, o portal mostra as notícias publicadas online, sem precisar gerar ZIP a cada notícia.

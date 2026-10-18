@@ -1,0 +1,22 @@
+RADAR VIRAL — V15 | NOTIFICAÇÕES DO CHROME
+
+O que foi adicionado:
+- Área “Ativar notificações” na página inicial.
+- Pedido de permissão do Chrome e registro de Service Worker.
+- Estrutura de inscrição Push API e tratamento de cliques nas notificações.
+- SQL inicial para armazenar inscrições push.
+
+IMPORTANTE: isto NÃO envia notificações sozinho ainda. O envio real requer configuração do servidor.
+
+CONFIGURAÇÃO NECESSÁRIA ANTES DE USAR EM PRODUÇÃO
+1. Publique o site em HTTPS (localhost serve para testes).
+2. Configure um serviço de envio push no backend (por exemplo, Supabase Edge Function) usando VAPID.
+3. Guarde a chave privada VAPID e credenciais apenas nos Secrets do Supabase, nunca em arquivos públicos.
+4. Configure push-config.js com a chave pública VAPID e a URL HTTPS do endpoint de inscrição.
+5. Faça o endpoint validar a inscrição e armazená-la em push_subscriptions; crie também um endpoint protegido para enviar notificações às inscrições quando uma notícia for publicada.
+6. Integre o envio à publicação no painel e teste em Chrome com permissão concedida.
+7. Execute ATUALIZAR-SUPABASE-V15-PUSH.sql no SQL Editor do projeto Supabase.
+
+O envio para o Chrome mesmo com o site fechado só funciona depois de configurar e publicar o backend de push. A versão não inventa chaves nem credenciais.
+
+Preserva os arquivos e funções da V14. Mantenha uma cópia da V14 até concluir os testes.

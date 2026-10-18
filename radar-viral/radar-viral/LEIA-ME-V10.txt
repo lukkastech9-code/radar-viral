@@ -1,0 +1,24 @@
+RADAR VIRAL V10 — ATUALIZAÇÃO DA V9
+
+1. Guarde a pasta V9 como backup.
+2. No Supabase, abra SQL Editor no MESMO projeto usado pela V9.
+3. Execute UMA VEZ o arquivo ATUALIZAR-SUPABASE-V10.sql. Não rode o SQL antigo novamente.
+4. Copie seu supabase-config.js já configurado da V9 para esta pasta V10, substituindo o arquivo vazio. NUNCA use secret key/service_role.
+5. Abra painel.html, entre com sua conta e publique uma matéria de teste.
+6. Abra index.html, confira a pesquisa por categoria, destaques, carregamento gradual e ranking semanal.
+7. Abra a matéria e confira matérias relacionadas.
+
+NOVIDADES
+- Destaques visuais e editorias preservados da V9.
+- Busca geral e pesquisa específica na categoria selecionada.
+- Carregar mais 6 matérias por vez.
+- Matérias relacionadas priorizam a mesma categoria.
+- Ranking de leituras dos últimos 7 dias, começando a contar após a migração.
+- Metadados e JSON-LD básicos de SEO.
+
+ATENÇÃO
+- Para acesso público, publique os arquivos em hospedagem HTTPS.
+- SEO de artigos carregados via JavaScript não garante indexação. Para resultados robustos no Google, gerar páginas HTML por artigo com metadados no servidor/build e sitemap.xml com URL pública.
+- Ranking mede aberturas, não visitantes únicos. Sem proteção de taxa, robôs podem inflar números.
+- O painel continua separado, sem login público para visitantes.
+- Não publique suas senhas ou secret keys.

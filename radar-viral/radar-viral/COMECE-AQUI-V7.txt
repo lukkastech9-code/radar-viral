@@ -1,0 +1,18 @@
+RADAR VIRAL V7 — LEIA PRIMEIRO
+
+1. Faça backup da sua pasta V6.
+2. Abra ATUALIZAR-SUPABASE-V7.sql no Bloco de Notas.
+3. Copie todo o conteúdo para o SQL Editor do MESMO projeto Supabase e clique Run.
+4. Copie o arquivo supabase-config.js da sua V6 que já funciona para esta pasta V7, substituindo o arquivo vazio. Use APENAS a URL e a publishable key. NUNCA use secret key.
+5. Abra painel.html no Chrome e entre com seu login habitual.
+6. Escolha uma imagem JPG/PNG/WebP até 5 MB e clique Aprovar e publicar.
+7. Abra index.html e teste a capa, a notícia e a seção Em alta.
+
+OBSERVAÇÕES
+- A V7 não altera as notícias nem os usuários existentes.
+- O ranking conta aberturas da notícia; não mede visitantes únicos e pode incluir robôs/recargas.
+- As artes SVG das categorias são originais e ficam em imagens/.
+- Para usar online, publique todos os arquivos em hospedagem HTTPS (por exemplo Cloudflare Pages).
+- Nunca envie sua secret key/service_role para arquivos do site.
+- A contagem é pública e aproximada, não serve como auditoria.
+- Não cole novamente o SQL antigo da V6: execute somente ATUALIZAR-SUPABASE-V7.sql.

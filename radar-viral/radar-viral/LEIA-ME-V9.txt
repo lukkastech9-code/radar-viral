@@ -1,0 +1,16 @@
+RADAR VIRAL V9 — LEIA PRIMEIRO
+
+1. Faça backup da sua pasta V8.
+2. Copie o arquivo supabase-config.js da sua V8 funcional para esta pasta V9, substituindo o arquivo vazio.
+3. Abra painel.html e entre com sua conta habitual.
+4. Abra index.html para ver os destaques, as notícias recentes, as editorias e o ranking.
+5. Abra uma matéria para testar os botões de compartilhamento.
+
+NÃO execute novamente SQL das versões anteriores.
+A V9 não exige alteração no banco Supabase.
+Não compartilhe secret keys/service_role nem senhas.
+
+ATENÇÃO: links compartilhados do site local (file://) não funcionam para outras pessoas. Primeiro publique o site em hospedagem HTTPS.
+Os metadados sociais dinâmicos podem não ser interpretados por robôs de redes sociais; previews confiáveis exigirão páginas com metadados servidos pelo host.
+O ranking continua baseado em aberturas registradas, não em visitantes únicos.
+O painel de redação continua separado, em painel.html.
