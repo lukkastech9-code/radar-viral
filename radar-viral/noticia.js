@@ -4,10 +4,12 @@
   const relatedList = document.getElementById('related-list');
   const config = window.RADAR_SUPABASE || {};
   const slug = new URLSearchParams(location.search).get('id');
-  const error = message => { article.replaceChildren(); const p = document.createElement('p'); p.className = 'article-error'; p.textContent = message; article.append(p); };
+  const setRobots = value => { let m = document.querySelector('meta[name="robots"]'); if (!m) { m = document.createElement('meta'); m.name = 'robots'; document.head.append(m); } m.content = value; };
+  const error = message => { setRobots('noindex,follow'); const canonical = document.querySelector('link[rel="canonical"]'); if (canonical) canonical.remove(); article.replaceChildren(); const p = document.createElement('p'); p.className = 'article-error'; p.textContent = message; article.append(p); };
   if (!config.url || !config.anonKey || !slug || !/^[a-z0-9-]+$/.test(slug)) { error('Notícia indisponível.'); return; }
   const base = config.url.replace(/\/$/, '');
-  const headers = { apikey: config.anonKey, Authorization: 'Bearer ' + config.anonKey, 'Content-Type': 'application/json' };
+  const headers = { apikey: config.anonKey, 'Content-Type': 'application/json' };
+  if (/^eyJ/.test(config.anonKey)) headers.Authorization = 'Bearer ' + config.anonKey;
   const make = (tag, className, text) => { const el = document.createElement(tag); if (className) el.className = className; if (text !== undefined) el.textContent = text; return el; };
   const formatDate = date => { const d = new Date(date + 'T12:00:00'); return Number.isNaN(d.getTime()) ? date : d.toLocaleDateString('pt-BR', {day:'numeric',month:'long',year:'numeric'}); };
   try {
@@ -40,7 +42,7 @@
     const desc=document.querySelector('meta[name="description"]');if(desc)desc.content=(news.summary||news.title||'').slice(0,155);
     const og=document.querySelector('meta[property="og:title"]');if(og)og.content=news.title;
     const ogdesc=document.querySelector('meta[property="og:description"]');if(ogdesc)ogdesc.content=news.summary||news.title;
-    const canonical=document.querySelector('link[rel=canonical]');if(canonical&&location.protocol.startsWith('http'))canonical.href=location.href;const ld=document.createElement('script');ld.type='application/ld+json';ld.textContent=JSON.stringify({'@context':'https://schema.org','@type':'NewsArticle',headline:news.title,description:news.summary||'',datePublished:news.date,image:news.image_url?[news.image_url]:undefined,mainEntityOfPage:location.href,publisher:{'@type':'Organization',name:'Radar Viral'}});document.head.append(ld);const ogimage=document.querySelector('meta[property="og:image"]');if(ogimage&&news.image_url)ogimage.content=news.image_url;
+    setRobots('index,follow,max-image-preview:large');const canonicalUrl=location.origin+location.pathname+'?id='+encodeURIComponent(slug);const canonical=document.querySelector('link[rel=canonical]');if(canonical&&location.protocol.startsWith('http'))canonical.href=canonicalUrl;const ogurl=document.querySelector('meta[property="og:url"]');if(ogurl)ogurl.content=canonicalUrl;const ld=document.createElement('script');ld.type='application/ld+json';ld.textContent=JSON.stringify({'@context':'https://schema.org','@type':'NewsArticle',headline:news.title,description:news.summary||'',datePublished:news.date,image:news.image_url?[news.image_url]:undefined,mainEntityOfPage:canonicalUrl,publisher:{'@type':'Organization',name:'Radar Viral'}});document.head.append(ld);const ogimage=document.querySelector('meta[property="og:image"]');if(ogimage&&news.image_url)ogimage.content=news.image_url;
 
     const end = make('div','article-end'); end.append(make('span','end-line')); end.append(make('strong','', 'RADAR VIRAL')); article.append(end);
     const crumb=document.getElementById('crumb-category');const catPages={Tecnologia:'tecnologia.html',Games:'games.html',Entretenimento:'entretenimento.html','Tendências':'tendencias.html',Curiosidades:'curiosidades.html'};const crumbLink=make('a','',news.cat||'Notícias');crumbLink.href=catPages[news.cat]||'index.html';crumb.replaceChildren(crumbLink);

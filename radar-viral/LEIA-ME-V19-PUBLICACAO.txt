@@ -1,0 +1,30 @@
+RADAR VIRAL V19 — PREPARAÇÃO PARA PUBLICAÇÃO E SEO
+
+Esta versão parte do ZIP V18.1 com a configuração pública do Supabase preservada.
+
+ALTERAÇÕES
+- Corrigido o uso de Authorization Bearer para aceitar chaves publicáveis sb_publishable; para chaves anon antigas em formato JWT, mantém Authorization.
+- Removidas páginas HTML de artigos demonstrativos que não devem aparecer como conteúdo editorial público.
+- Retirada a mensagem de pré-lançamento da página inicial e do texto Sobre.
+- Desativados os espaços visuais de anúncios de demonstração. Anúncios reais continuam desligados até que a configuração oficial do AdSense esteja completa.
+- O botão de notificações fica oculto enquanto o serviço push e as chaves VAPID não estiverem configurados, evitando expor uma função incompleta ao público.
+- Adicionadas URLs canônicas e diretivas de indexação às páginas públicas estáveis.
+- A página de pesquisa e as ferramentas editoriais ficam fora do índice.
+- Criado sitemap dinâmico em /sitemap.xml, incluindo páginas públicas e matérias com status published no Supabase.
+- A página dinâmica noticia.html fica indexável quando uma matéria publicada é carregada; URLs inválidas ou que falham recebem noindex.
+
+PUBLICAÇÃO NA VERCEL
+1. Faça uma cópia de segurança do repositório atual.
+2. Envie o conteúdo de dentro da pasta radar-viral para a raiz do projeto Vercel (não envie a pasta pai como uma pasta adicional).
+3. Confirme que vercel.json e a pasta api/ foram incluídos; são necessários para o sitemap dinâmico.
+4. Faça o deploy.
+5. Confira /robots.txt e /sitemap.xml no domínio publicado. O sitemap deve listar artigos publicados e páginas públicas.
+6. Abra a home, uma categoria e uma notícia publicada; confirme que o conteúdo carrega.
+7. No Search Console, reenvie https://radar-viral-radar-viral-livid.vercel.app/sitemap.xml e use Inspecionar URL em uma notícia publicada.
+
+IMPORTANTE
+- A URL e a chave em supabase-config.js são destinadas ao navegador; nunca coloque service_role ou outra chave secreta no site.
+- A função do sitemap usa apenas a chave publicável e lista apenas matérias cujo status é published.
+- O Google não garante indexação mesmo quando a página está tecnicamente acessível. Conteúdo original, útil e revisado continua necessário.
+- O arquivo adsense-config.js mantém publisherId e slots vazios; anúncios reais só serão ativados depois que os IDs oficiais forem configurados.
+- Se o domínio principal do Vercel for diferente do usado neste pacote, atualize a constante SITE_URL em api/sitemap.js, as canônicas e a URL em robots.txt antes do deploy.

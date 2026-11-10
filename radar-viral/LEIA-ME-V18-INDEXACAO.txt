@@ -1,0 +1,23 @@
+RADAR VIRAL V18 — CORREÇÕES TÉCNICAS DE INDEXAÇÃO
+
+O QUE FOI CORRIGIDO
+- sitemap.xml agora lista somente páginas institucionais estáveis e a página inicial.
+- Os seis artigos de demonstração receberam noindex para não serem apresentados ao Google como conteúdo editorial final.
+- noticia.html recebeu noindex porque é um modelo dinâmico com parâmetro ?id= e não uma página individual de notícia.
+- A página inicial recebeu canonical e metadados Open Graph básicos.
+- robots.txt foi mantido com a regra Allow: / e referência ao sitemap atual.
+
+IMPORTANTE — ANTES DE PUBLICAR
+O arquivo supabase-config.js deste ZIP está vazio (url e anonKey). Isso significa que a página inicial/categorias/notícia dinâmica não consegue carregar as notícias do Supabase. Não inventei nem substituí credenciais. Se o Supabase é usado no site publicado, configure nele a URL do projeto e a chave anon/publishable pública correta antes de esperar que o feed funcione. Nunca coloque a service_role key no site.
+
+Também não removi nem inventei conteúdo editorial. Os seis artigos continuam marcados como demonstração e com noindex. Para aprovação do AdSense, é necessário publicar conteúdo original, útil e revisado; correções técnicas não garantem aprovação.
+
+PUBLICAÇÃO
+1. Extraia o ZIP.
+2. Abra a pasta radar-viral dentro dele.
+3. Envie o conteúdo dessa pasta para o projeto Vercel, substituindo os arquivos antigos.
+4. Confirme que /robots.txt e /sitemap.xml abrem no domínio publicado.
+5. Confirme que a home mostra notícias reais. Se o feed ficar vazio, configure supabase-config.js com os dados corretos.
+6. No Search Console, mantenha o sitemap enviado. Não tente solicitar indexação repetidamente enquanto a cota estiver excedida.
+
+Este pacote melhora os sinais técnicos de indexação, mas não pode garantir que o Google indexe o site nem que o AdSense aprove a conta.

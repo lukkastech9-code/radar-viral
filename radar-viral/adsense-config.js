@@ -5,5 +5,5 @@
 window.RADAR_ADSENSE_CONFIG = {
   publisherId: "",
   slots: { home: "", article: "", category: "" },
-  previewPlaceholders: true
+  previewPlaceholders: false
 };
